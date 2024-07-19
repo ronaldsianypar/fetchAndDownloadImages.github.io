@@ -4,7 +4,7 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
     padding: 20px;
-    margin-top: 110px; /* Jarak dari atas halaman untuk mengakomodasi elemen input */
+    margin-top: 130px; /* Jarak dari atas halaman untuk mengakomodasi elemen input */
 }
 
 .image-grid .image-item {
@@ -30,31 +30,36 @@
 .input-container {
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
+    /* left: 0;
+    right: 0; */
     background-color: #fff;
     padding: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     z-index: 1000;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .input-container input {
     padding: 10px;
-    width: 300px;
+    width: 100%;
     font-size: 16px;
 }
 
 .input-container button {
-    padding: 10px 20px;
+    padding: 5px 15px;
     background-color: #007bff;
     color: #fff;
     border: none;
     cursor: pointer;
     font-size: 16px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
+}
+
+.ml-btn {
+    margin-right: 5px;
 }
 
 /* CSS untuk label sedang diproses */
@@ -70,12 +75,18 @@
     border: unset !important;
 }
 
+.div-button {
+    justify-content: center;
+}
 @media screen and (max-width: 576px) {
     .image-grid {
         margin-top: 150px; /* Margin-top for mobile screens */
     }
 
     .input-container input {
-        width: 350px;
+        width: 100%;
+    }
+    .input-container button {
+        padding: 5px 15px;
     }
 }
