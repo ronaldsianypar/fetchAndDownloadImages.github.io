@@ -3,6 +3,7 @@ async function fetchSourceCode(url) {
         const proxyUrl = 'https://api.allorigins.win/get?url=';
         const response = await fetch(proxyUrl + encodeURIComponent(url));
         if (!response.ok) {
+            showAlertModal('Network response was not ok');
             throw new Error('Network response was not ok');
         }
         const getResponse = await response.json();
