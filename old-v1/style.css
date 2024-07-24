@@ -3,9 +3,7 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
     padding: 20px;
-    overflow-y: auto;
-    max-height: 100vh;
-    /* margin-top: 150px; */
+    margin-top: 150px;
 }
 
 .image-grid .image-item {
@@ -29,8 +27,8 @@
 
 /* CSS untuk input dan tombol */
 .input-container {
-    /* position: fixed; */
-    /* top: 10.5%; */
+    position: fixed;
+    top: 0;
     /* left: 0;
     right: 0; */
     background-color: #fff;
@@ -112,7 +110,7 @@
 }
 @media screen and (max-width: 576px) {
     .image-grid {
-        /* margin-top: 165px; */
+        margin-top: 165px;
     }
 
     .input-container input {

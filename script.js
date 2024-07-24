@@ -15,6 +15,7 @@ const copyDescriptionButton = document.getElementById('copyDescriptionButton');
 const selectAllButton = document.getElementById('selectAllButton');
 const titleImage = document.getElementById('titleImage');
 const alertCopyUrl = document.getElementById('alertCopyUrl');
+const idexportToSheet = document.getElementById('idexportToSheet');
 let inputUrl = '';
 
 // Function to generate a new URL with an additional suffix number
@@ -360,32 +361,6 @@ function downloadImages() {
         // Clear the loading interval
         clearInterval(intervalId);
     });
-}
-
-function copyDescription() {
-    const hiddenTextarea = document.querySelector('.text-desc');
-    const copyButton = document.getElementById('copyDescriptionButton'); // Update with the correct button ID
-
-    if (hiddenTextarea && copyButton) {
-        navigator.clipboard.writeText(hiddenTextarea.textContent)
-            .then(() => {
-                // Add the 'copied' class to change button background color
-                copyButton.textContent = 'Copied!';
-                copyButton.classList.add('copied');
-
-                // Revert button text and background color back to original after 2 seconds
-                setTimeout(() => {
-                    copyButton.textContent = 'Copy Description';
-                    copyButton.classList.remove('copied'); // Remove the 'copied' class
-                }, 2000); // Adjust the duration as needed
-            })
-            .catch(err => {
-                console.error('Failed to copy text: ', err);
-                // Optionally handle errors here
-            });
-    } else {
-        // Optionally handle cases where the textarea or button is not found
-    }
 }
 
 function clearInputUrl() {
